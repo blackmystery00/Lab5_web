@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="header1"><b>Javascript</b></h1>
+    <div>
+        Name : <input type="text" name="name1" id="name1">
+        Age : <input type="number" name="age" id="age">
+        <input type="submit" onclick="result1()">
+        
+        <p id="result1" style="text-align: left;"></p>
+    </div>
+    <div>
+        Number 1 : <input type="number" name="number1" id="number1">
+        Number 2 : <input type="number" name="number2" id="number2">
+        <input type="submit" onclick="result2()">
+
+        <p id="result2" style="text-align: left;"></p>
+    </div>
+    <div>
+        Name : <input type="text" name="name2" id="name2">
+        Age : <input type="number" name="age2" id="age2">
+        <input type="submit" onclick="result3()">
+        
+        <p id="result3" style="text-align: left;"></p>
+    </div>
+    <div id="div4">
+        Number 1 : <input type="number" name="numb1" id="numb1"><br><br>
+        Number 2 : <input type="number" name="numb2" id="numb2"><br><br>
+        <input type="button" value="+" onclick="result4()" id="operator">
+        <input type="button" value="-" onclick="result5()" id="operator">
+        <input type="button" value="*" onclick="result6()" id="operator">
+        <input type="button" value="/" onclick="result7()" id="operator">
+        <hr>
+        
+        <p id="result4" style="text-align: left;"></p>
+    </div><br>
+    <input id="prompt" type="button" value="Prompt" onclick="result8()"><br>
+    <script>
+        const d = new Date();
+        let year = d.getFullYear();
+        function result1(){
+            var x = document.getElementById("name1").value;
+            var y = document.getElementById("age").value;
+            document.getElementById("result1").innerHTML = "Welcome "+x+"<br>You are "+y+" years old";
+        }
+
+        function result2(){
+            var x = parseInt(document.getElementById("number1").value);
+            var y = parseInt(document.getElementById("number2").value);
+            document.getElementById("result2").innerHTML = "Total: "+(x+y);
+        }
+
+        function result3(){
+            var x = document.getElementById("name2").value;
+            var y = year - parseInt(document.getElementById("age2").value);
+            document.getElementById("result3").innerHTML = "Welcome "+x+"<br>You are born in: "+y;
+        }
+    
+        function result4(){
+            var y = parseInt(document.getElementById("numb1").value);
+            var z = parseInt(document.getElementById("numb2").value);
+                document.getElementById("result4").innerHTML = y+z;
+        }
+        function result5(){
+            var y = parseInt(document.getElementById("numb1").value);
+            var z = parseInt(document.getElementById("numb2").value);
+                document.getElementById("result4").innerHTML = y-z;
+        }
+        function result6(){
+            var y = parseInt(document.getElementById("numb1").value);
+            var z = parseInt(document.getElementById("numb2").value);
+                document.getElementById("result4").innerHTML = y*z;
+        }
+        function result7(){
+            var y = parseInt(document.getElementById("numb1").value);
+            var z = parseInt(document.getElementById("numb2").value);
+                document.getElementById("result4").innerHTML = y/z;
+        }
+        function result8(){
+            let number1 = parseInt(prompt("Enter number 1", ""));
+            let number2 = parseInt(prompt("Enter number 2", ""));
+            var total = number1+number2;
+            alert("Total number : "+total);
+        }
+    </script>
+
+</body>
+</html>

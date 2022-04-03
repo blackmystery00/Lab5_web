@@ -1,0 +1,34 @@
+#header1{
+    padding: 50px;
+    text-align: center;
+}
+
+body{
+    width: 40%; 
+    margin: auto;
+}
+
+div{
+    padding: 25px;
+    margin: auto;
+    height: 100px;
+}
+
+#div4{
+    padding: 25px;
+    margin: auto;
+    height: 120px;
+}
+
+#prompt{
+    background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;;
+}
